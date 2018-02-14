@@ -3410,3 +3410,28 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\Extens
 2018-02-06T22:33:01: Saving group "c:\users\bree~\documents\visual studio 2017\projects\djangowebproject2\djangowebproject2\env\lib\site-packages\pytz"
 2018-02-06T22:33:01: End of group "c:\users\bree~\documents\visual studio 2017\projects\djangowebproject2\djangowebproject2\env\lib\site-packages\pytz"
 2018-02-06T22:33:09: Deleting 0 files
+
+2018-02-14T12:37:21: Start analysis
+2018-02-14T12:37:23: [ERROR] Analysis failed
+System.InvalidOperationException: Cannot obtain search paths ---> System.InvalidOperationException: Cannot obtain list of paths
+The system cannot find the file specified
+   at Microsoft.PythonTools.Interpreter.PythonTypeDatabase.<GetUncachedDatabaseSearchPathsAsync>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<RunWorker>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Run>d__33.MoveNext()
+
+2018-02-14T12:42:25: Start analysis
+2018-02-14T12:42:26: IncludeModulesFromModulePath = win32com
+2018-02-14T12:42:26: Deleting 0 files
