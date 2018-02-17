@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\jhelm\source\repos\Hanstuff\Hanstuff\hanenv"
+set "VIRTUAL_ENV=C:\Users\jhelm\source\repos\DjangoWebProject2\DjangoWebProject2\env"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
@@ -9,7 +9,7 @@ if defined _OLD_VIRTUAL_PROMPT (
     )
 	set "_OLD_VIRTUAL_PROMPT=%PROMPT%"	
 )
-set "PROMPT=(hanenv) %PROMPT%"
+set "PROMPT=(env) %PROMPT%"
 
 if not defined _OLD_VIRTUAL_PYTHONHOME (
     set "_OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%"

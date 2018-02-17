@@ -39,3 +39,4 @@ compat
 __version__
 depends
 Feature
+tests

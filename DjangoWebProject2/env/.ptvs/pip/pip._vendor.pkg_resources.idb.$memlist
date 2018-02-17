@@ -154,3 +154,4 @@ Environment
 email
 string_types
 get_entry_info
+tests
