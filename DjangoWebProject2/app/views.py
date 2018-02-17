@@ -44,3 +44,55 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def beginners(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/beginners.html',
+        {
+            'title':'Beginners',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def intermediate(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/intermediate.html',
+        {
+            'title':'Intermediate',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def advanced(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/advanced.html',
+        {
+            'title':'Advanced',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def questions(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/questions.html',
+        {
+            'title':'Q&A',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
