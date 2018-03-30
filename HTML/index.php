@@ -34,12 +34,11 @@
       margin-bottom: 30px;
   }
   .jumbotron {
-    background: url("images/placeholder.jpg") no-repeat center center;
+    background: url("placeholder.jpg") no-repeat center center;
     background-size: 100% 100%;
-     background: contain;
     width: 100%; /* make sure to define width to fill container */
     height: 618px;
-    
+
   }
  
   .container-fluid {
@@ -214,22 +213,25 @@
 
 <?php
 
-  echo "Successful"; $host="localhost"; // Host name
-  $username="******"; // Mysql username
-  $password="******"; // Mysql password
-  $db_name="******"; // Database name
-  $tbl_name="users"; // Table name
+  $mysqli = new mysqli('11.68.0.34', 'hanstuff_gatech', 'csproject@GT', 'hanstuff_site');
+  if ($mysqli->connect_errno) {
+      // The connection failed. What do you want to do?
+      // You could contact yourself (email?), log the error, show a nice page, etc.
+      // You do not want to reveal sensitive information
 
-  // Connect to server and select database.
-  mysql_connect("$host", "$username", "$password")or die("cannot connect");
-  mysql_select_db("$db_name")or die("cannot select DB");
+      // Let's try this:
+      echo "Sorry, this website is experiencing problems.";
 
-  else {
-  echo "ERROR";
+      // Something you should not do on a public site, but this example will show you
+      // anyways, is print out MySQL error related information -- you might log this
+      echo "Error: Failed to make a MySQL connection, here is why: \n";
+      echo "Errno: " . $mysqli->connect_errno . "\n";
+      echo "Error: " . $mysqli->connect_error . "\n";
+
+      // You might want to show them something nice, but we will simply exit
+      exit;
   }
-
-  // close connection
-  mysql_close();
+    $mysqli->close();
 ?>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -246,11 +248,11 @@
       <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="lessons.html">LESSONS<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="beginner.html">Beginner</a></li>
-          <li><a href="intermediate.html">Intermediate</a></li>
-          <li><a href="advanced.html">Advanced</a></li>
+          <li><a href="lessons.html">Beginner</a></li>
+          <li><a href="#">Intermediate</a></li>
+          <li><a href="#">Advanced</a></li>
           </ul>
-        <li><a href="culture.html">CULTURE</a></li>
+        <li><a href="home.html">CULTURE</a></li>
         <li><a href="#" id="signin">SIGN IN</a></li>
       </ul>
     </div>
@@ -311,7 +313,7 @@ $(document).ready(function(){
   <div class="row">
     <div class="col-sm-8">
       <h2>HANSTUFF</h2><br>
-      <h5>We're passionate about all things Hangkuk(Korea).That's why we made it our mission to make innovative lessons and share information about Korean culture.</h5><br>
+      <h5>We're passionate about all thibngs Hanguk(Korea).That's why we made it our mission to make innovative lessons and share information about Korean culture.</h5><br>
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">

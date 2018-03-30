@@ -1,7 +1,4 @@
 
-
-
-
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -22,11 +19,13 @@ h4 {
     margin-bottom: 30px;
 }
 .jumbotron {
-    background-color: #2790FF;
+    background-color: white;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
+    color: black;
 }
+
 .container-fluid {
     padding: 60px 50px;
 }
@@ -75,6 +74,23 @@ h4 {
 .dropdown-menu {
     background-color:#2790FF;
 }
+#panel,#flip {
+    padding: 5px;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    border-radius:3px !important;
+}
+
+#panel {
+    border-radius:3px !important;
+    transition: box-shadow 0.5s;
+    margin-left: 20px;
+    color: #303030;
+    background-color: aliceblue;
+}
+
+
 .panel {
     border: 1px solid #2790FF;
     border-radius:5px !important;
@@ -171,6 +187,16 @@ h4 {
     border-color: transparent;
     color: #fff !important;
 }
+.navbar-lessons {
+    border-color: transparent;
+    background-color: orange;
+    color: #ffffff;
+    border-top: 100px;
+    border-color: #ffffff;
+    text-align: center;
+
+}
+
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
