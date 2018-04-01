@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Hanstuff:Korean language learning</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="culture.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#flip2").click(function(){
+                $("#panel2").slideToggle("slow");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#flip3").click(function(){
+                $("#panel3").slideToggle("slow");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">HANSTUFF</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LESSONS<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="beginner.html">Beginner</a></li>
+                        <li><a href="intermediate.html">Intermediate</a></li>
+                        <li><a href="advanced.html">Advanced</a></li>
+                    </ul>
+                <li><a href="home.html">CULTURE</a></li>
+                <li><a href="#portfolio">ACCOUNT</a></li>
+                <li><a href="#contact">SETTINGS</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-culture">
+        <ul class="nav navbar-nav navbar-center">
+            <li><a href="alphabet.html">PRELIMINARY</a></li>
+            <li><a href="beginner.html">BEGINNER</a></li>
+            <li><a href="advanced.html">ADVANCED</a></li>
+            <li><a href="intermediate.html">INTERMEDIATE</a></li>
+        </ul>
+
+    </nav>
+</nav>
+
+<div class="jumbotron">
+    <h1 style = "text-align: center">Culture</h1><br>
+    <p style = "text-align: center">come learn about all things Korea!</p>
+</div>
+
+<div class =" container-fluid">
+
+    <div class ="col-sm-4">
+        <div id="flip"><h1 style = "text-align:left">Food</h1></div>
+        <div id="panel" style = "text-align:left">
+            <h2><u>Street Food</u></h2>
+            <h2><u>Traditional Tea House</u></h2>
+            <h2><u>Convenience Store Food</u></h2>
+
+        </div>
+
+        <div id="flip2"><h1 style = "text-align:left">Entertainment</h1></div>
+        <div id="panel2" style = "text-align:left">
+            <h2><u>Kpop</u></h2>
+            <h2><u>Trot Music</u></h2>
+            <h2><u>Kdramas</u></h2>
+        </div>
+
+        <div id="flip3"><h1 style = "text-align:left">Communication</h1></div>
+        <div id="panel3" style = "text-align:left">
+            <h2><u>Greetings in Korea</u></h2>
+            <h2><u>How to Respond to Compliments</u></h2>
+            <h2><u>Korean Taxis</u></h2>
+
+        </div>
+    </div>
+
+    <div class ="col-sm-6">
+        <iframe src="images/pdfread.pdf" width ="100%" height ="400px" scrolling ="yes">
+        </iframe></div>
+
+</div>
+</body>
+</html>

@@ -20,7 +20,7 @@ h4 {
 }
 .jumbotron {
     background-color: white;
-    color: #fff;
+    margin-top: 50px;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
     color: black;
@@ -179,7 +179,7 @@ h4 {
     color: #fff !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #2790FF !important;
+    color: orange !important;
     background-color: #fff !important;
 }
 .navbar-default .navbar-toggle {
