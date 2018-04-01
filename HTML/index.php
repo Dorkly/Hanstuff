@@ -1,17 +1,16 @@
-
 <?php
     include("config.php");
     session_start();
-
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         // username and password sent from form
 
         $myusername = mysqli_real_escape_string($db,$_POST['username']);
         $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-        $sql = "SELECT password FROM auth_user WHERE lower(username) = lower('$myusername')";
+        $sql = "SELECT id, username, password FROM auth_user WHERE lower(username) = lower('$myusername')";
 
         $result = mysqli_query($db,$sql);
+
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
 
@@ -20,15 +19,19 @@
         // If result matched $myusername, table row must be 1 row
 
         if($count == 1) {
-            if (password_verify($mypassword, $result)) {
+            $passHash = $row["password"];
+            if (password_verify($mypassword, $passHash)) {
+                printf($row["password"]   );
                 $_SESSION['login_user'] = $myusername;
             }else {
                 //password is invalid
-                $error = "Your Login Name or Password is invalid";
+                $_SESSION['errMsg'] = "Your Login Name or Password is invalid";
+                echo "<script type='text/javascript'>alert('$_SESSION[errMsg]');</script>";
             }
         }else {
             // User Name is invalid
-            $error = "Your Login Name or Password is invalid";
+            $_SESSION['errMsg'] = "Your Login Name or Password is invalid";
+            echo "<script type='text/javascript'>alert('$_SESSION[errMsg]');</script>";
         }
     }
 ?>
@@ -68,7 +71,7 @@
       margin-bottom: 30px;
   }
   .jumbotron {
-    background: url("placeholder.jpg") no-repeat center center;
+    background: url("../images/placeholder.jpg") no-repeat center center;
     background-size: 100% 100%;
     width: 100%; /* make sure to define width to fill container */
     height: 618px;
@@ -244,7 +247,7 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+<?php unset($_SESSION['errMsg']); ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -264,7 +267,7 @@
           <li><a href="#">Advanced</a></li>
           </ul>
         <li><a href="home.html">CULTURE</a></li>
-          <?php if(isset($_SESSION['id'])): ?>
+          <?php if(isset($_SESSION['login_user'])): ?>
           <li><a href="logout.php" id="signout">SIGN OUT</a></li>
         <?php else: ?>
             <li><a href="#" id="signin">SIGN IN</a></li>
@@ -291,7 +294,7 @@
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" name = "password" id="psw" placeholder="Enter password">
+              <input type="password" class="form-control" name = "password" id="psw" placeholder="Enter password">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
@@ -301,7 +304,7 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Not a member? <a href="/registration.php">Sign Up</a></p>
           <p>Forgot <a href="#">Password?</a></p>
         </div>
       </div>
