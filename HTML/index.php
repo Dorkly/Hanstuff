@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+
+<?php
+    include("config.php");
+    session_start();
+
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        // username and password sent from form
+
+        $myusername = mysqli_real_escape_string($db,$_POST['username']);
+        $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+
+        $sql = "SELECT id FROM auth_user WHERE lower(username) = lower('$myusername') and password = '$mypassword'";
+        $result = mysqli_query($db,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $active = $row['active'];
+
+        $count = mysqli_num_rows($result);
+
+        // If result matched $myusername and $mypassword, table row must be 1 row
+
+        if($count == 1) {
+            $_SESSION['login_user'] = $myusername;
+
+            // header("location: welcome.php");
+        }else {
+            $error = "Your Login Name or Password is invalid";
+        }
+    }
+?>
+
 <html lang="en">
 <head>
   <title>Hanstuff:Korean languge learning</title>
@@ -211,29 +240,6 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<?php
-
-  $mysqli = new mysqli('11.68.0.34', 'hanstuff_gatech', 'csproject@GT', 'hanstuff_site');
-  if ($mysqli->connect_errno) {
-      // The connection failed. What do you want to do?
-      // You could contact yourself (email?), log the error, show a nice page, etc.
-      // You do not want to reveal sensitive information
-
-      // Let's try this:
-      echo "Sorry, this website is experiencing problems.";
-
-      // Something you should not do on a public site, but this example will show you
-      // anyways, is print out MySQL error related information -- you might log this
-      echo "Error: Failed to make a MySQL connection, here is why: \n";
-      echo "Errno: " . $mysqli->connect_errno . "\n";
-      echo "Error: " . $mysqli->connect_error . "\n";
-
-      // You might want to show them something nice, but we will simply exit
-      exit;
-  }
-    $mysqli->close();
-?>
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -253,7 +259,11 @@
           <li><a href="#">Advanced</a></li>
           </ul>
         <li><a href="home.html">CULTURE</a></li>
-        <li><a href="#" id="signin">SIGN IN</a></li>
+          <?php if(isset($_SESSION['id'])): ?>
+          <li><a href="logout.php" id="signout">SIGN OUT</a></li>
+        <?php else: ?>
+            <li><a href="#" id="signin">SIGN IN</a></li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>
@@ -269,14 +279,14 @@
           <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
+          <form role="form" method = "post">
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" name = "username" id="usrname" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" name = "password" id="psw" placeholder="Enter password">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
