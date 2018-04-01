@@ -7,7 +7,7 @@
         $myusername = mysqli_real_escape_string($db,$_POST['username']);
         $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-        $sql = "SELECT id, username, password FROM auth_user WHERE lower(username) = lower('$myusername')";
+        $sql = "SELECT id, username, password, first_name FROM auth_user WHERE lower(username) = lower('$myusername')";
 
         $result = mysqli_query($db,$sql);
 
@@ -21,8 +21,8 @@
         if($count == 1) {
             $passHash = $row["password"];
             if (password_verify($mypassword, $passHash)) {
-                printf($row["password"]   );
                 $_SESSION['login_user'] = $myusername;
+                $_SESSION['firstName'] = $row[first_name];
             }else {
                 //password is invalid
                 $_SESSION['errMsg'] = "Your Login Name or Password is invalid";
@@ -260,6 +260,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+          <?php if(isset($_SESSION['login_user'])): ?>
+          <li> <a href="logout.php" id="signout"> <?php echo "$_SESSION[firstName]" ?></a></li>
+          <?php endif; ?>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="lessons.html">LESSONS<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="lessons.html">Beginner</a></li>
@@ -290,7 +293,7 @@
           <form role="form" method = "post">
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" name = "username" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" name = "username" id="usrname" placeholder="Enter user name">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
