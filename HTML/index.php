@@ -9,20 +9,25 @@
         $myusername = mysqli_real_escape_string($db,$_POST['username']);
         $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-        $sql = "SELECT id FROM auth_user WHERE lower(username) = lower('$myusername') and password = '$mypassword'";
+        $sql = "SELECT password FROM auth_user WHERE lower(username) = lower('$myusername')";
+
         $result = mysqli_query($db,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
 
         $count = mysqli_num_rows($result);
 
-        // If result matched $myusername and $mypassword, table row must be 1 row
+        // If result matched $myusername, table row must be 1 row
 
         if($count == 1) {
-            $_SESSION['login_user'] = $myusername;
-
-            // header("location: welcome.php");
+            if (password_verify($mypassword, $result)) {
+                $_SESSION['login_user'] = $myusername;
+            }else {
+                //password is invalid
+                $error = "Your Login Name or Password is invalid";
+            }
         }else {
+            // User Name is invalid
             $error = "Your Login Name or Password is invalid";
         }
     }
