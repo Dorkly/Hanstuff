@@ -40,4 +40,16 @@
             </ul>
         </div>
     </div>
+
+    <?php if ($_SERVER['PHP_SELF'] == "/Hanstuff/html/alphabet.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/beginner.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/intermediate.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/advanced.php"): ?>
+        <nav class="navbar navbar-lessons">
+            <ul class="nav navbar-nav navbar-center">
+                <li><a href="alphabet.html">ALPAHBET</a></li>
+                <li><a href="beginner.html">BEGINNER</a></li>
+                <li><a href="intermediate.html">INTERMEDIATE</a></li>
+                <li><a href="advanced.html">ADVANCED</a></li>
+            </ul>
+        </nav>
+    <?php endif; ?>
+
 </nav>

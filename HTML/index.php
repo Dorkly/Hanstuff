@@ -213,7 +213,7 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<?php unset($_SESSION['errMsg']); ?>
+
 <?php include ("header.php"); ?>
 
 <div class="jumbotron text-center"  style ="padding-top: 300px; color:white">
