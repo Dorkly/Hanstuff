@@ -1,39 +1,5 @@
 <?php
-    include("config.php");
     session_start();
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        // username and password sent from form
-
-        $myusername = mysqli_real_escape_string($db,$_POST['username']);
-        $mypassword = mysqli_real_escape_string($db,$_POST['password']);
-
-        $sql = "SELECT id, username, password, first_name FROM auth_user WHERE lower(username) = lower('$myusername')";
-
-        $result = mysqli_query($db,$sql);
-
-        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-        $active = $row['active'];
-
-        $count = mysqli_num_rows($result);
-
-        // If result matched $myusername, table row must be 1 row
-
-        if($count == 1) {
-            $passHash = $row["password"];
-            if (password_verify($mypassword, $passHash)) {
-                $_SESSION['login_user'] = $myusername;
-                $_SESSION['firstName'] = $row[first_name];
-            }else {
-                //password is invalid
-                $_SESSION['errMsg'] = "Your Login Name or Password is invalid";
-                echo "<script type='text/javascript'>alert('$_SESSION[errMsg]');</script>";
-            }
-        }else {
-            // User Name is invalid
-            $_SESSION['errMsg'] = "Your Login Name or Password is invalid";
-            echo "<script type='text/javascript'>alert('$_SESSION[errMsg]');</script>";
-        }
-    }
 ?>
 
 <html lang="en">
@@ -248,81 +214,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php unset($_SESSION['errMsg']); ?>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">HANSTUFF</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-          <?php if(isset($_SESSION['login_user'])): ?>
-          <li> <a href="logout.php" id="signout"> <?php echo "$_SESSION[firstName]" ?></a></li>
-          <?php endif; ?>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="lessons.html">LESSONS<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="lessons.html">Beginner</a></li>
-          <li><a href="#">Intermediate</a></li>
-          <li><a href="#">Advanced</a></li>
-          </ul>
-        <li><a href="home.html">CULTURE</a></li>
-          <?php if(isset($_SESSION['login_user'])): ?>
-          <li><a href="logout.php" id="signout">SIGN OUT</a></li>
-        <?php else: ?>
-            <li><a href="#" id="signin">SIGN IN</a></li>
-        <?php endif; ?>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form" method = "post">
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" name = "username" id="usrname" placeholder="Enter user name">
-            </div>
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="password" class="form-control" name = "password" id="psw" placeholder="Enter password">
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" value="" checked>Remember me</label>
-            </div>
-              <button type="submit" class="btn btn-primary btn-block "><span class="glyphicon glyphicon-off"></span> Login</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="/registration.php">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<script>
-$(document).ready(function(){
-    $("#signin").click(function(){
-        $("#myModal").modal();
-    });
-});
-</script>
+<?php include ("header.php"); ?>
 
 <div class="jumbotron text-center"  style ="padding-top: 300px; color:white">
   <h1>Korean Language Learning</h1>
@@ -386,36 +278,9 @@ $(document).ready(function(){
     </div>
   </div>
 </div>
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Copyright 2018  <a href="https://www.w3schools.com" title="Visit w3schools">www.google.com</a></p>
-</footer>
+<?php include ("footer.php"); ?>
 
 <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
 
   $(window).scroll(function() {
     $(".slideanim").each(function(){

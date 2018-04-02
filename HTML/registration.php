@@ -64,32 +64,8 @@
 
 </head>
 
-<body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">HANSTUFF</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LESSONS<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Beginner</a></li>
-          <li><a href="#">Intermediate</a></li>
-          <li><a href="#">Advanced</a></li>
-          </ul>
-        <li><a href="home.html">CULTURE</a></li>
-        <li><a href="#portfolio">ACCOUNT</a></li>
-        <li><a href="#contact">SETTINGS</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body id="myPage">
+<?php include ("header.php"); ?>
 <div>
 <br><br>
   <form role="form" method = "post">
@@ -128,4 +104,5 @@
   </div>
 </form>
 </div>
+<?php include ("footer.php"); ?>
 </body>
