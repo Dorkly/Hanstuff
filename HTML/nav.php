@@ -14,15 +14,15 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="lessons.html">LESSONS<span class="caret"></span></a>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="alphabet.php">LESSONS<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="lessons.html">Beginner</a></li>
-                        <li><a href="#">Intermediate</a></li>
-                        <li><a href="#">Advanced</a></li>
+                        <li><a href="beginner.php">Beginner</a></li>
+                        <li><a href="intermediate.php">Intermediate</a></li>
+                        <li><a href="advanced.php">Advanced</a></li>
                     </ul>
-                <li><a href="home.html">CULTURE</a></li>
+                <li><a href="culture.php">CULTURE</a></li>
                 <?php if(isset($_SESSION['login_user'])): ?>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="lessons.html"><?php echo "$_SESSION[firstName]" ?><span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo "$_SESSION[firstName]" ?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#portfolio">ACCOUNT</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
@@ -42,12 +42,12 @@
     </div>
 
     <?php if ($_SERVER['PHP_SELF'] == "/Hanstuff/html/alphabet.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/beginner.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/intermediate.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/advanced.php"): ?>
-        <nav class="navbar navbar-lessons">
+        <nav class="navbar navbar-lessons" style="z-index: 10">
             <ul class="nav navbar-nav navbar-center">
-                <li><a href="alphabet.html">ALPAHBET</a></li>
-                <li><a href="beginner.html">BEGINNER</a></li>
-                <li><a href="intermediate.html">INTERMEDIATE</a></li>
-                <li><a href="advanced.html">ADVANCED</a></li>
+                <li><a href="alphabet.php">ALPAHBET</a></li>
+                <li><a href="beginner.php">BEGINNER</a></li>
+                <li><a href="intermediate.php">INTERMEDIATE</a></li>
+                <li><a href="advanced.php">ADVANCED</a></li>
             </ul>
         </nav>
     <?php endif; ?>
