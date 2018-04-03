@@ -22,7 +22,7 @@
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
-         <img src="images/hangul.jpg" alt="hangul" height="400px">
+         <img src="../images/hangul.jpg" alt="hangul" height="400px">
     </div>
   </div>
 </div>
