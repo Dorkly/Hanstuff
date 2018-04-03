@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <?php if ($_SERVER['PHP_SELF'] == "/Hanstuff/html/alphabet.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/beginner.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/intermediate.php" or $_SERVER['PHP_SELF'] == "/Hanstuff/html/advanced.php"): ?>
+    <?php if ($_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/alphabet.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/beginner.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/intermediate.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/advanced.php"): ?>
         <nav class="navbar navbar-lessons" style="z-index: 10">
             <ul class="nav navbar-nav navbar-center">
                 <li><a href="alphabet.php">ALPAHBET</a></li>
