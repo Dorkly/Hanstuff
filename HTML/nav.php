@@ -22,7 +22,7 @@
                     </ul>
                 <li><a href="culture.php">CULTURE</a></li>
                 <?php if(isset($_SESSION['login_user'])): ?>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo "$_SESSION[firstName]" ?><span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $_SESSION['firstName'] ?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#portfolio">ACCOUNT</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
