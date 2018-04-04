@@ -1,6 +1,6 @@
 <?php
 Session_start();
-    if(!isset($_SESSION['login_user'])):
+    if(!isset($_SESSION['login_user']) OR $_SESSION['permissions'] < 2):
         header('Location:index.php');
     endif;
 ?>
