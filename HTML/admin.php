@@ -1,5 +1,8 @@
 <?php
 Session_start();
+    if(!isset($_SESSION['login_user'])):
+        header('Location:index.php');
+    endif;
 ?>
 
 <?php include ("head.php"); ?>

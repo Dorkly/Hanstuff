@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#portfolio">ACCOUNT</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
-                            <li><a href="#">ADMIN</a></li>
+                            <li><a href="admin.php">ADMIN</a></li>
                         <?php endif; ?>
                         <?php if($_SESSION['permissions'] >= 1): ?>
                             <li><a href="#">LESSONS</a></li>
