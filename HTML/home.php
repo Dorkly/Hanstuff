@@ -31,10 +31,10 @@ session_start();
             <div class="col-sm-5">
                 <div class="panel panel-lessons">
                     <div class="panel-heading-lessons">Lessons</div>
-                    <div class="panel-body">Lesson 6-2: Interviews</div>
+<!--                    <div class="panel-body">Lesson 6-2: Interviews</div>-->
                     <ul class="list-group">
-                        <li class="list-group-item">Vocabulary: Going to Restaurant</li>
-                        <li class="list-group-item">Grammar: Verb Stem + 았/었어요.</li>
+<!--                        <li class="list-group-item">Vocabulary: Going to Restaurant</li>-->
+<!--                        <li class="list-group-item">Grammar: Verb Stem + 았/었어요.</li>-->
                     </ul>
                 </div>
             </div>

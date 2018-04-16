@@ -74,9 +74,12 @@ Session_start();
         </div>
     </div>
 
-    <div class ="col-sm-6=8">
+    <div class ="col-sm-8">
         <iframe src="images/pdfread.pdf" width ="100%" height ="500px" scrolling ="yes">
         </iframe></div>
+    <div class ="col-sm-8">
+        </br><button type="submit" style="float: right" class="btn btn-warning">Complete Lesson</button>
+    </div>
     <!-- begin wwww.htmlcommentbox.com -->
     <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
     <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
