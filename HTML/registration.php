@@ -10,7 +10,7 @@
         $passRepeat = mysqli_real_escape_string($db,$_POST['psw-repeat']);
         $userName = mysqli_real_escape_string($db,$_POST['userName']);
 
-        $sqlUser = "SELECT id FROM auth_user WHERE lower(username) = lower('$myusername')";
+        $sqlUser = "SELECT id FROM auth_user WHERE lower(username) = lower('$userName')";
 
         $result = mysqli_query($db,$sqlUser);
         if (!$result) {
@@ -28,7 +28,8 @@
             $passHash = password_hash($password, PASSWORD_DEFAULT);
             if (password_verify($passRepeat, $passHash)) {
                 $sql = "INSERT INTO auth_user (password, first_name, last_name, email, date_joined, username) VALUES ('$passHash','$firstName','$lastName','$email',CURDATE(),'$userName')";
-
+                $sql2 = "INSERT INTO profile_user (current_level, last_lesson, username) VALUES ('BEGINNER', null, '$userName')";
+                mysqli_query($db,$sql2);
                 if (mysqli_query($db,$sql)) {
                     header("location:index.php");
                 } else {

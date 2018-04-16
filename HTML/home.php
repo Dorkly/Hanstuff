@@ -8,8 +8,8 @@ session_start();
     <?php include ("header.php"); ?>
 
     <div class="container-fluid">
-        <h1>Welcome , Hannah</h1>
-        <p>Level:  Medium Beginner</p>
+        <h1>Welcome, <?php echo $_SESSION['firstName'] ?></h1>
+        <p>Level: <?php echo $_SESSION['currentLevel']?></p>
         <p></p>
         <div class="row">
             <div class="col-xs-6 col-md-3">
