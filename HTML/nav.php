@@ -1,5 +1,5 @@
 <?php
-    Session_start();
+//    Session_start();
 ?>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -24,7 +24,7 @@
                 <?php if(isset($_SESSION['login_user'])): ?>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $_SESSION['firstName'] ?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#portfolio">ACCOUNT</a></li>
+                        <li><a href="home.php">ACCOUNT</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
                             <li><a href="admin.php">ADMIN</a></li>
                         <?php endif; ?>
