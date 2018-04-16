@@ -1,5 +1,5 @@
 <?php
-    Session_start();
+Session_start();
 ?>
 
 <head>
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
     <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
-    <link rel="stylesheet" type="text/css" href="../css/culture.css.css" />
+    <link rel="stylesheet" type="text/css" href="../css/culture.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

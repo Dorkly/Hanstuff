@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-sm-8">
       <h2>HANSTUFF</h2><br>
-      <h5>We're passionate about all thibngs Hanguk(Korea).That's why we made it our mission to make innovative lessons and share information about Korean culture.</h5><br>
+      <h5>We're passionate about all things Hanguk(Korea).That's why we made it our mission to make innovative lessons and share information about Korean culture.</h5><br>
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
@@ -88,4 +88,3 @@
 </script>
 
 </body>
-</html>
