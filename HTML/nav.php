@@ -44,7 +44,7 @@
     <?php if ($_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/alphabet.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/beginner.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/intermediate.php" or $_SERVER['PHP_SELF'] == dirname($_SERVER['PHP_SELF']) ."/advanced.php"): ?>
         <nav class="navbar navbar-lessons" style="z-index: 10">
             <ul class="nav navbar-nav navbar-center">
-                <li><a href="alphabet.php">ALPAHBET</a></li>
+                <li><a href="alphabet.php">ALPHABET</a></li>
                 <li><a href="beginner.php">BEGINNER</a></li>
                 <li><a href="intermediate.php">INTERMEDIATE</a></li>
                 <li><a href="advanced.php">ADVANCED</a></li>
