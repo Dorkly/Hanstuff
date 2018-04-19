@@ -9,6 +9,7 @@
     // still needs to work on the database stuff
     include("config.php");
     session_start();
+    //define some session variable
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $firstName = mysqli_real_escape_string($db,$_POST['firstName']);
@@ -17,6 +18,7 @@
         $password = mysqli_real_escape_string($db,$_POST['psw']);
         $passRepeat = mysqli_real_escape_string($db,$_POST['psw-repeat']);
         $userName = mysqli_real_escape_string($db,$_POST['userName']);
+
 
         $sqlUser = "SELECT id FROM auth_user WHERE lower(username) = lower('$myusername')";
 
@@ -27,6 +29,8 @@
         }
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
+
+        $_SESSION["favcolor"] = $userName;
 
         $count = mysqli_num_rows($result);
 
@@ -64,10 +68,14 @@
     <hr>
 
     <br><label id="username"><b>Enter Username: </b></label>
-      <br><label id="username"><b>Enter Username: </b></label>
+      <?php echo $_SESSION['firstName']; ?>
 
-    <br><label id ="firstName"><b>$firstName </b></label>
-    <br><input type="text" placeholder="First Name" name="firstName" required>
+    <br><label><b>Enter Lastname: </b></label>
+      <?php echo $_SESSION['lastName']; ?>
+
+    <br><label id="username"><b>Enter Email: </b></label>
+      <?php echo $_SESSION['email']; ?>
+
 
     <div><span style="align-content: center">
       <form enctype="multipart/form-data" action="uploader.php" method="POST">
