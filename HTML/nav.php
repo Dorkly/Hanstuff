@@ -24,6 +24,7 @@
                 <?php if(isset($_SESSION['login_user'])): ?>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $_SESSION['firstName'] ?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+
                         <li><a href="home.php">ACCOUNT</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
                             <li><a href="admin.php">ADMIN</a></li>
@@ -31,8 +32,16 @@
                         <?php if($_SESSION['permissions'] >= 1): ?>
                             <li><a href="#">LESSONS</a></li>
                         <?php endif; ?>
-                        <li><a href="#">SETTINGS</a></li>
+
+                        <!-- -->
+                        <li><a href="adminSetting.php">SETTINGS</a></li>
+                        <?php if($_SESSION['permissions'] >= 2): ?>
+                            <li><a href="admin.php">ADMIN</a></li>
+                        <?php endif; ?>
+
                         <li><a href="logout.php" id="signout">SIGN OUT</a></li>
+
+
                     </ul>
                 <?php else: ?>
                     <li><a href="#" id="signin">SIGN IN</a></li>

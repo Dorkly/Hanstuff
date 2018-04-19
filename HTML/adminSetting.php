@@ -64,9 +64,9 @@
     <hr>
 
     <br><label id="username"><b>Enter Username: </b></label>
-    <br><input type="text" placeholder="Username" name="userName" required>
+      <br><label id="username"><b>Enter Username: </b></label>
 
-    <br><label id ="firstName"><b>First Name: </b></label>
+    <br><label id ="firstName"><b>$firstName </b></label>
     <br><input type="text" placeholder="First Name" name="firstName" required>
 
     <div><span style="align-content: center">
