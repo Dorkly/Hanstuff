@@ -1,13 +1,11 @@
-<?php
-    Session_start();
-?>
+
 
 <?php include ("head.php"); ?>
 
 <body  id="myPage">
 <?php include ("header.php"); ?>
 
-<div class="jumbotron2">
+<div class="jumbotron">
     Alphabet
     Let's learn the Korean alphabet!
     the Korean alphabet is called hangul and is made up of bsamepdfjnsdfjk

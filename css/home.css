@@ -1,3 +1,6 @@
+
+
+
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -10,7 +13,7 @@ h2 {
     font-weight: 600;
     margin-bottom: 30px;
 }
-h5 {
+h4 {
     font-size: 19px;
     line-height: 1.375em;
     color: #303030;
@@ -18,17 +21,10 @@ h5 {
     margin-bottom: 30px;
 }
 .jumbotron {
-    background: url("../images/placeholder.jpg") no-repeat center center;
-    background-size: 100% 100%;
-    width: 100%; /* make sure to define width to fill container */
-    height: 618px;
-}
-.jumbotron2 {
-    background-color: white;
-    margin-top: 50px;
+    background-color: #2790FF;
+    color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
-    color: black;
 }
 .container-fluid {
     padding: 60px 50px;
@@ -64,11 +60,7 @@ h5 {
 .carousel-indicators li.active {
     background-color: #2790FF;
 }
-
-.dropdown-menu {
-    background-color:#2790FF;
-}
-.item h5 {
+.item h4 {
     font-size: 19px;
     line-height: 1.375em;
     font-weight: 400;
@@ -78,13 +70,52 @@ h5 {
 .item span {
     font-style: normal;
 }
+
+.dropdown-menu {
+    background-color:#2790FF;
+}
 .panel {
     border: 1px solid #2790FF;
-    border-radius:0 !important;
+    border-radius:5px !important;
+    transition: box-shadow 0.5s;
+}
+
+.panel-lessons{
+    border: 1px solid orange;
+    border-radius:5px !important;
+    transition: box-shadow 0.5s;
+}
+.panel-culture{
+    border: 1px solid purple;
+    border-radius:5px !important;
     transition: box-shadow 0.5s;
 }
 .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+}
+
+.panel-heading-lessons {
+    font-family: Montserrat, sans-serif;
+    color: #fff !important;
+    background-color: orange !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.panel-heading-culture {
+    font-family: Montserrat, sans-serif;
+    background-image: none;
+    color: #fff !important;
+    background-color: purple !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .panel-footer .btn:hover {
     border: 1px solid #2790FF;
@@ -92,6 +123,7 @@ h5 {
     color: #2790FF;
 }
 .panel-heading {
+    font-family: Montserrat, sans-serif;
     color: #fff !important;
     background-color: #2790FF !important;
     padding: 25px;
@@ -119,7 +151,7 @@ h5 {
 .navbar {
     margin-bottom: 0;
     background-color: #2790FF;
-    z-index: 9999;
+    z-index: 99999;
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important;
@@ -150,15 +182,6 @@ footer .glyphicon {
     animation-duration: 1s;
     -webkit-animation-duration: 1s;
     visibility: visible;
-}
-.modal-header, h4, .close {
-    background-color: #2790FF;
-    color:white !important;
-    text-align: center;
-    font-size: 30px;
-}
-.modal-footer {
-    background-color: #f9f9f9;
 }
 @keyframes slide {
     0% {

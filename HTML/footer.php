@@ -1,6 +1,4 @@
-<?php
-//    Session_start();
-?>
+
 
 <footer class="container-fluid text-center">
     <a href="#myPage" title="To Top">

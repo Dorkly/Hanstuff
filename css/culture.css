@@ -131,11 +131,6 @@ h4 {
     transition: box-shadow 0.5s;
 }
 
-.panel-lessons{
-    border: 1px solid orange;
-    border-radius:5px !important;
-    transition: box-shadow 0.5s;
-}
 .panel-culture{
     border: 1px solid purple;
     border-radius:5px !important;
@@ -161,17 +156,6 @@ h4 {
     border-bottom-right-radius: 0px;
 }
 
-.panel-heading-lessons {
-    font-family: Montserrat, sans-serif;
-    color: #fff !important;
-    background-color: orange !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
 .panel-heading-culture {
     font-family: Montserrat, sans-serif;
     background-image: none;

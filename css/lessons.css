@@ -19,13 +19,12 @@ h4 {
     margin-bottom: 30px;
 }
 .jumbotron {
-    background-color: white;
-    margin-top: 50px;
+    background-color: whitesmoke;
+    color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
     color: black;
 }
-
 .container-fluid {
     padding: 60px 50px;
 }
@@ -101,11 +100,7 @@ h4 {
     border-radius:5px !important;
     transition: box-shadow 0.5s;
 }
-.panel-culture{
-    border: 1px solid purple;
-    border-radius:5px !important;
-    transition: box-shadow 0.5s;
-}
+
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
@@ -137,18 +132,7 @@ h4 {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
-.panel-heading-culture {
-    font-family: Montserrat, sans-serif;
-    background-image: none;
-    color: #fff !important;
-    background-color: purple !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
+
 .panel-footer {
     background-color: white !important;
 }
