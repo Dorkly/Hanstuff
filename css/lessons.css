@@ -19,7 +19,8 @@ h4 {
     margin-bottom: 30px;
 }
 .jumbotron {
-    background-color: whitesmoke;
+    background: url(../images/flower.jpg) no-repeat center;
+    background-size: 100% 100%;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;

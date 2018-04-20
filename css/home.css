@@ -21,7 +21,8 @@ h4 {
     margin-bottom: 30px;
 }
 .jumbotron {
-    background-color: #2790FF;
+    background: url(../images/placeholder.jpg) no-repeat center;
+    background-size: 100% 100%;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;

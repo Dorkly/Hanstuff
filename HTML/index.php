@@ -8,7 +8,7 @@
 
 <?php include ("header.php"); ?>
 
-<div class="jumbotron text-center"  style ="padding-top: 300px; color:white">
+<div class="jumbotron" style ="padding-top: 300px; text-align: center; color:white">
   <h1>Korean Language Learning</h1>
   <p>Learn.Discuss.Grow.</p>
 </div>
