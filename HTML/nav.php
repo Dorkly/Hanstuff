@@ -32,7 +32,7 @@
                         <?php endif; ?>
 
                         <!-- -->
-                        <li><a href="adminSetting.php">SETTINGS</a></li>
+                        <li><a href="setting.php">SETTINGS</a></li>
                         <?php if($_SESSION['permissions'] >= 2): ?>
                             <li><a href="admin.php">ADMIN</a></li>
                         <?php endif; ?>
