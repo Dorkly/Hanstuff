@@ -8,7 +8,7 @@
 
 <?php include ("header.php"); ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style = " background: url(../images/flag.jpg) no-repeat center; background-size: 100% 100%;">
     <h1 style = "text-align: center">Advanced Lessons</h1><br>
     <p style = "text-align: center">Explore more complex vocabulary and multiple grammar points</p>
 </div>

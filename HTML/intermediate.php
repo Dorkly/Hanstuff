@@ -8,7 +8,7 @@ Session_start();
 
 <?php include ("header.php"); ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style = " background: url(../images/rocks.jpg) no-repeat center; background-size: 100% 100%; image-orientation: 90deg;">
     <h1 style = "text-align: center">Intermediate Lessons</h1><br>
     <p style = "text-align: center">Continue to build on what you already know with more ways to express yourself</p>
 </div>

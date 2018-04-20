@@ -7,7 +7,7 @@
 <body  id="myPage">
 <?php include ("header.php"); ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style = " background: url(../images/flower.jpg) no-repeat center; background-size: 100% 100%;">
     <h1 style = "text-align: center">Beginner Lessons</h1><br>
     <p style = "text-align: center">start from the beginning and build you way up.</p>
 </div>

@@ -18,13 +18,11 @@ h4 {
     font-weight: 400;
     margin-bottom: 30px;
 }
-.jumbotron {
-    background: url(../images/flower.jpg) no-repeat center;
-    background-size: 100% 100%;
+.jumbotron {;
     color: #fff;
-    padding: 100px 25px;
+    text-shadow: 2px 2px 2px black;
+    padding: 200px 25px;
     font-family: Montserrat, sans-serif;
-    color: black;
 }
 .container-fluid {
     padding: 60px 50px;

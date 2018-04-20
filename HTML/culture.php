@@ -8,7 +8,7 @@ Session_start();
 
 <?php include ("header.php"); ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style = " background: url(../images/food.jpg) no-repeat center; background-size: 100% 100%;">
     <h1 style = "text-align: center">Culture</h1><br>
     <p style = "text-align: center">come learn about all things Korea!</p>
 </div>

@@ -1,19 +1,16 @@
 
 
-<?php include ("head.php"); ?>
+<?php include ("lesshead.php"); ?>
 
 <body  id="myPage">
 <?php include ("header.php"); ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style = " background: url(../images/lamps.jpg) no-repeat center; background-size: 100% 100%;">
     Alphabet
     Let's learn the Korean alphabet!
-    the Korean alphabet is called hangul and is made up of bsamepdfjnsdfjk
 </div>
-<?php
-echo '$_SERVER[PHP_SELF]: ' . $_SERVER['PHP_SELF'] . '<br />';
-echo  dirname($_SERVER['PHP_SELF']) ."/alphabet.php"
-?>
+
+
 
 <?php include ("footer.php"); ?>
 </body>
