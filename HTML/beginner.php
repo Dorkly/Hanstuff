@@ -60,7 +60,6 @@ function get_pdf($number) {
     </div>
     <div class ="col-sm-8">
         <iframe name = "pdfViewer" src= 'lesson_pdfs/Lesson1.pdf' width ="100%" height ="500px" scrolling ="yes">
-<!--        <iframe name = "pdfViewer" src= "--><?php //echo $final; ?><!--" width ="100%" height ="500px" scrolling ="yes">-->
         </iframe></div>
 
 
