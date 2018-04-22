@@ -8,8 +8,8 @@ session_start();
     <?php include ("header.php"); ?>
 
     <div class="container-fluid">
-        <h1>Welcome , Hannah</h1>
-        <p>Level:  Medium Beginner</p>
+        <h1>Welcome, <?php echo $_SESSION['firstName'] ?></h1>
+        <p>Level: <?php echo $_SESSION['currentLevel']?></p>
         <p></p>
         <div class="row">
             <div class="col-xs-6 col-md-3">
@@ -31,10 +31,10 @@ session_start();
             <div class="col-sm-5">
                 <div class="panel panel-lessons">
                     <div class="panel-heading-lessons">Lessons</div>
-                    <div class="panel-body">Lesson 6-2: Interviews</div>
+<!--                    <div class="panel-body">Lesson 6-2: Interviews</div>-->
                     <ul class="list-group">
-                        <li class="list-group-item">Vocabulary: Going to Restaurant</li>
-                        <li class="list-group-item">Grammar: Verb Stem + 았/었어요.</li>
+<!--                        <li class="list-group-item">Vocabulary: Going to Restaurant</li>-->
+<!--                        <li class="list-group-item">Grammar: Verb Stem + 았/었어요.</li>-->
                     </ul>
                 </div>
             </div>

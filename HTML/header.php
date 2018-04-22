@@ -8,13 +8,17 @@
         $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
         $sql = "SELECT id, username, password, first_name, CASE WHEN is_superuser = 1 THEN 1 ELSE CASE WHEN is_staff = 1 THEN 2 ELSE 0 END END permissions FROM auth_user WHERE lower(username) = lower('$myusername')";
-
         $result = mysqli_query($db,$sql);
+        $sql2 = "SELECT current_level, last_lesson FROM profile_user WHERE username = $myusername";
+        $result2 = mysqli_query($db,$sql2);
 
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $row2 = mysqli_fetch_array($result2,MYSQLI_ASSOC);
         $active = $row['active'];
+        $active2 = $row2['active'];
 
         $count = mysqli_num_rows($result);
+        $count2 = mysqli_num_rows($result2);
 
         // If result matched $myusername, table row must be 1 row
 
@@ -24,6 +28,8 @@
                 $_SESSION['login_user'] = $myusername;
                 $_SESSION['firstName'] = $row[first_name];
                 $_SESSION['permissions'] = $row[permissions];
+                $_SESSION['currentLevel'] = $row2[current_level];
+                $_SESSION['lastLesson'] = $row2[last_lesson];
                 $sqlupdate = "UPDATE  auth_user SET last_login = NOW(), is_active = 1 WHERE lower(username) = lower('$myusername')";
                 mysqli_query($db,$sqlupdate);
             }else {

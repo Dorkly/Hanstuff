@@ -1,5 +1,5 @@
 <?php
-    Session_start();
+//    Session_start();
 ?>
 
 <footer class="container-fluid text-center">
