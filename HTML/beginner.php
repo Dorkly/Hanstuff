@@ -7,6 +7,13 @@
 <body  id="myPage">
 <?php include ("header.php"); ?>
 
+<?php
+$currPdfPath = 1;
+function get_pdf($number) {
+    $currPdfPath = $number;
+}
+?>
+
 <div class="jumbotron" style = " background: url(../images/flower.jpg) no-repeat center; background-size: 100% 100%;">
     <h1 style = "text-align: center">Beginner Lessons</h1><br>
     <p style = "text-align: center">start from the beginning and build you way up.</p>
@@ -16,8 +23,8 @@
     <div class ="col-sm-4">
         <div id="flip"><h1 style = "text-align:left">Lessons 1~12</h1></div>
         <div id="panel" style = "text-align:left">
-            <h2><u>Lesson 1</u></h2>
-            <h2><u>Lesson 2</u></h2>
+            <h2><u><a href=<?php get_pdf(1)?>>Lesson 1</a></u></h2>
+            <h2><u><a href=<?php get_pdf(2)?>>Lesson 2</a></u></h2>
             <h2><u>Lesson 3</u></h2>
             <h2><u>Lesson 4</u></h2>
             <h2><u>Lesson 5</u></h2>
@@ -44,7 +51,12 @@
         </div>
     </div>
     <div class ="col-sm-8">
-        <iframe src="images/pdfread.pdf" width ="100%" height ="500px" scrolling ="yes">
+        <?php
+        $path1 = 'lesson_pdfs/Lesson';
+        $path3 = '.pdf';
+        $final = $path1.$currPdfPath.$path3;
+        ?>
+        <iframe src= "<?php echo $final; ?>" width ="100%" height ="500px" scrolling ="yes">
         </iframe></div>
 
 
