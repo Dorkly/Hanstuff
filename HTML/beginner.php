@@ -33,16 +33,16 @@ function get_pdf($number) {
         <div id="panel" style = "text-align:left">
             <h2><u><a href="<?php get_pdf(1)?>" target="pdfViewer">Lesson 1</a></u></h2>
             <h2><u><a href="<?php get_pdf(2)?>" target="pdfViewer">Lesson 2</a></u></h2>
-            <h2><u>Lesson 3</u></h2>
-            <h2><u>Lesson 4</u></h2>
-            <h2><u>Lesson 5</u></h2>
-            <h2><u>Lesson 6</u></h2>
-            <h2><u>Lesson 7</u></h2>
-            <h2><u>Lesson 8</u></h2>
-            <h2><u>Lesson 9</u></h2>
-            <h2><u>Lesson 10</u></h2>
-            <h2><u>Lesson 11</u></h2>
-            <h2><u>Lesson 12</u></h2>
+            <h2><u><a href="<?php get_pdf(3)?>" target="pdfViewer">Lesson 3</a></u></h2>
+            <h2><u><a href="<?php get_pdf(4)?>" target="pdfViewer">Lesson 4</a></u></h2>
+            <h2><u><a href="<?php get_pdf(5)?>" target="pdfViewer">Lesson 5</a></u></h2>
+            <h2><u><a href="<?php get_pdf(6)?>" target="pdfViewer">Lesson 6</a></u></h2>
+            <h2><u><a href="<?php get_pdf(7)?>" target="pdfViewer">Lesson 7</a></u></h2>
+            <h2><u><a href="<?php get_pdf(8)?>" target="pdfViewer">Lesson 8</a></u></h2>
+            <h2><u><a href="<?php get_pdf(9)?>" target="pdfViewer">Lesson 9</a></u></h2>
+            <h2><u><a href="<?php get_pdf(10)?>" target="pdfViewer">Lesson 10</a></u></h2>
+            <h2><u><a href="<?php get_pdf(11)?>" target="pdfViewer">Lesson 11</a></u></h2>
+            <h2><u><a href="<?php get_pdf(12)?>" target="pdfViewer">Lesson 12</a></u></h2>
             <!--<h3>Conversation01<br></h3>-->
             <!--<ul>-->
             <!--<li>Vocabulary & Expressions<br></li>-->
