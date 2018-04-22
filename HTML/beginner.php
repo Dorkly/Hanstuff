@@ -11,6 +11,14 @@
 $currPdfPath = 1;
 function get_pdf($number) {
     $currPdfPath = $number;
+    $path1 = 'lesson_pdfs/Lesson';
+    $path3 = '.pdf';
+    $final = $path1.$currPdfPath.$path3;
+    $doc = new DomDocument;
+    echo $final;
+    if ($doc -> getElementById('pdfViewer') != NULL) {
+        $doc -> getElementById('pdfViewer') -> setAttribute("src", $final);
+    }
 }
 ?>
 
@@ -23,8 +31,8 @@ function get_pdf($number) {
     <div class ="col-sm-4">
         <div id="flip"><h1 style = "text-align:left">Lessons 1~12</h1></div>
         <div id="panel" style = "text-align:left">
-            <h2><u><a href=<?php get_pdf(1)?>>Lesson 1</a></u></h2>
-            <h2><u><a href=<?php get_pdf(2)?>>Lesson 2</a></u></h2>
+            <h2><u><a href="<?php get_pdf(1)?>" target="pdfViewer">Lesson 1</a></u></h2>
+            <h2><u><a href="<?php get_pdf(2)?>" target="pdfViewer">Lesson 2</a></u></h2>
             <h2><u>Lesson 3</u></h2>
             <h2><u>Lesson 4</u></h2>
             <h2><u>Lesson 5</u></h2>
@@ -51,12 +59,8 @@ function get_pdf($number) {
         </div>
     </div>
     <div class ="col-sm-8">
-        <?php
-        $path1 = 'lesson_pdfs/Lesson';
-        $path3 = '.pdf';
-        $final = $path1.$currPdfPath.$path3;
-        ?>
-        <iframe src= "<?php echo $final; ?>" width ="100%" height ="500px" scrolling ="yes">
+        <iframe name = "pdfViewer" src= 'lesson_pdfs/Lesson1.pdf' width ="100%" height ="500px" scrolling ="yes">
+<!--        <iframe name = "pdfViewer" src= "--><?php //echo $final; ?><!--" width ="100%" height ="500px" scrolling ="yes">-->
         </iframe></div>
 
 
