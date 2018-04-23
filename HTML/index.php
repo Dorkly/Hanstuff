@@ -31,7 +31,7 @@
 <div id="services" class="container-fluid text-center bg-grey">
   <h2>LESSONS</h2>
   <h5>We divided our lessons into three levels, and within those levels are three more categories:<br>
-        Low, Medium and High</h5>
+        Beginner, Intermediate and Advanced</h5>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
