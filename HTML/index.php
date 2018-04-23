@@ -33,7 +33,7 @@
   <h5>We divided our lessons into three levels, and within those levels are three more categories:<br>
         Beginner, Intermediate and Advanced</h5>
   <br>
-  <div class="row slideanim">
+  <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-book logo-small"></span>
       <h5>BEGINNER</h5>
@@ -62,7 +62,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      <span class="glyphicon glyphicon-globe logo"></span>
     </div>
     <div class="col-sm-8">
       <h2>CULTURE</h2><br>
