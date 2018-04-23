@@ -20,6 +20,13 @@ function get_pdf($number) {
         $doc -> getElementById('pdfViewer') -> setAttribute("src", $final);
     }
 }
+
+function complete_lesson() {
+    $id_user = $_SESSION['login_user'];
+    $date = date('Y-m-d H:i:s');
+    $sql = "INSERT INTO lessons_historyheader (id_history,id_user,id_lessons,lessonCompletedDate) VALUES (null, $id_user, $currPdfPath, $date)";
+    mysqli_query($db,$sql);
+}
 ?>
 
 <div class="jumbotron" style = " background: url(../images/flower.jpg) no-repeat center; background-size: 100% 100%;">
@@ -62,6 +69,11 @@ function get_pdf($number) {
         <iframe name = "pdfViewer" src= 'lesson_pdfs/Lesson1.pdf' width ="100%" height ="500px" scrolling ="yes">
         </iframe></div>
 
+<!--    --><?php //if(isset($_SESSION['login_user'])): ?>
+    <div class ="col-sm-8">
+        </br><button type="submit" style="float: right" class="btn btn-warning"><a href="<?php complete_lesson()?>">Complete Lesson</button>
+    </div>
+<!--    --><?php //endif; ?>
 
     <!-- begin wwww.htmlcommentbox.com -->
     <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
