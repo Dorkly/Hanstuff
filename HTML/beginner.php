@@ -69,11 +69,11 @@ function complete_lesson() {
         <iframe name = "pdfViewer" src= 'lesson_pdfs/Lesson1.pdf' width ="100%" height ="500px" scrolling ="yes">
         </iframe></div>
 
-<!--    --><?php //if(isset($_SESSION['login_user'])): ?>
+    <?php if(isset($_SESSION['login_user'])): ?>
     <div class ="col-sm-8">
         </br><button type="submit" style="float: right" class="btn btn-warning"><a href="<?php complete_lesson()?>">Complete Lesson</button>
     </div>
-<!--    --><?php //endif; ?>
+    <?php endif; ?>
 
     <!-- begin wwww.htmlcommentbox.com -->
     <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
