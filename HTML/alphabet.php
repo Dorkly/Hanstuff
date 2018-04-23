@@ -1,6 +1,6 @@
-
-
-<?php include ("lesshead.php"); ?>
+<?php
+if ( !isset($_SESSION) ) session_start();
+include ("lesshead.php"); ?>
 
 <body  id="myPage">
 <?php include ("header.php"); ?>

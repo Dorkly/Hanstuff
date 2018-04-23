@@ -1,4 +1,5 @@
 <?php
+if ( !isset($_SESSION) ) session_start();
 define('DB_SERVER', '108.167.137.42');
 define('DB_USERNAME', 'hanstuff_gatech');
 define('DB_PASSWORD', 'csproject@GT');

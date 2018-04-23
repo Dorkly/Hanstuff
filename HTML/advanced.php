@@ -1,5 +1,5 @@
 <?php
-    Session_start();
+if ( !isset($_SESSION) ) session_start();
 ?>
 
 <?php include ("lesshead.php"); ?>

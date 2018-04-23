@@ -1,5 +1,3 @@
-
-
 <head>
     <title>Hanstuff:Korean language learning</title>
     <meta charset="utf-8">
