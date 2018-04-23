@@ -31,14 +31,14 @@
 <div id="services" class="container-fluid text-center bg-grey">
   <h2>LESSONS</h2>
   <h5>We divided our lessons into three levels, and within those levels are three more categories:<br>
-        Low, Medium and High</h5>
+        Beginner, Intermediate and Advanced</h5>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-book logo-small"></span>
       <h5>BEGINNER</h5>
       <p>Start from the alphabet work your way up!</p>
-      <p>learn basic vocab,sentence structure,etc.</p>
+      <p>learn basic vocab, sentence structure etc.</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-book logo-small"></span>
@@ -52,7 +52,7 @@
       <span class="glyphicon glyphicon-book logo-small"></span>
       <span class="glyphicon glyphicon-book logo-small"></span>
       <h5>ADVANCED</h5>
-      <p>practice with Korean articles and stories</p>
+      <p>Practice with Korean articles and stories</p>
       <p>Learn about Korean idioms, more complex expressions and practice reading Korean literature</p>
     </div>
   </div>
@@ -66,7 +66,7 @@
     </div>
     <div class="col-sm-8">
       <h2>CULTURE</h2><br>
-      <h5><strong>MISSION:</strong> Learn about Korea through music,entertainment,food and tourism!</h5><br>
+      <h5><strong>MISSION:</strong> Learn about Korea through music, entertainment, food and tourism!</h5><br>
     </div>
   </div>
 </div>

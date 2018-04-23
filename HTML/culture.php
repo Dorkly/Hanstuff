@@ -8,6 +8,21 @@ Session_start();
 
 <?php include ("header.php"); ?>
 
+<?php
+$currPdfPath = 1;
+function get_pdf($number) {
+    $currPdfPath = $number;
+    $path1 = 'culture_pdfs/Culture';
+    $path3 = '.pdf';
+    $final = $path1.$currPdfPath.$path3;
+    $doc = new DomDocument;
+    echo $final;
+    if ($doc -> getElementById('pdfViewer') != NULL) {
+        $doc -> getElementById('pdfViewer') -> setAttribute("src", $final);
+    }
+}
+?>
+
 <div class="jumbotron" style = " background: url(../images/food.jpg) no-repeat center; background-size: 100% 100%;">
     <h1 style = "text-align: center">Culture</h1><br>
     <p style = "text-align: center">come learn about all things Korea!</p>
@@ -18,32 +33,35 @@ Session_start();
     <div class ="col-sm-4">
         <div id="flip"><h1 style = "text-align:left">Food</h1></div>
         <div id="panel" style = "text-align:left">
-            <h2><u>Street Food</u></h2>
-            <h2><u>Traditional Tea House</u></h2>
-            <h2><u>Convenience Store Food</u></h2>
-
+            <h2><u><a href="<?php get_pdf(1)?>" target="pdfViewer">Street Food</a></u></h2>
+            <h2><u><a href="<?php get_pdf(2)?>" target="pdfViewer">Traditional Tea House</a></u></h2>
+            <h2><u><a href="<?php get_pdf(3)?>" target="pdfViewer">Convenience Store Food</a></u></h2>
         </div>
 
         <div id="flip2"><h1 style = "text-align:left">Entertainment</h1></div>
         <div id="panel2" style = "text-align:left">
-            <h2><u>Kpop</u></h2>
-            <h2><u>Trot Music</u></h2>
-            <h2><u>Kdramas</u></h2>
+            <h2><u><a href="<?php get_pdf(4)?>" target="pdfViewer">Kpop</a></u></h2>
+            <h2><u><a href="<?php get_pdf(5)?>" target="pdfViewer">Trot Music</a></u></h2>
+            <h2><u><a href="<?php get_pdf(6)?>" target="pdfViewer">Kdramas</a></u></h2>
         </div>
 
         <div id="flip3"><h1 style = "text-align:left">Communication</h1></div>
         <div id="panel3" style = "text-align:left">
-            <h2><u>Greetings in Korea</u></h2>
-            <h2><u>How to Respond to Compliments</u></h2>
-            <h2><u>Korean Taxis</u></h2>
-
+            <h2><u><a href="<?php get_pdf(7)?>" target="pdfViewer">Greetings in Korea</a></u></h2>
+            <h2><u><a href="<?php get_pdf(8)?>" target="pdfViewer">How to Respond to Compliments</a></u></h2>
+            <h2><u><a href="<?php get_pdf(9)?>" target="pdfViewer">Korean Taxis</a></u></h2>
         </div>
     </div>
 
     <div class ="col-sm-8">
-        <iframe src="images/pdfread.pdf" width ="100%" height ="500px" scrolling ="yes">
+        <iframe name = "pdfViewer" src= 'culture_pdfs/Culture1.pdf' width ="100%" height ="500px" scrolling ="yes">
         </iframe></div>
 
+    <?php if(isset($_SESSION['login_user'])): ?>
+        <div class ="col-sm-8">
+            </br><button type="submit" style="float: right" class="btn btn-warning"><a href="<?php complete_lesson()?>">Complete Lesson</button>
+        </div>
+    <?php endif; ?>
 
 
     <div id="disqus_thread"></div>
